@@ -1,0 +1,99 @@
+.ReactModal__Content.ReactModal__Content--after-open{
+    height: fit-content;
+}
+.modal-login-container{
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+}
+.modal-login-container div> button{
+    background-color: inherit;
+    border: none;
+}
+.modal-photo-container>button:is(:active,:hover){
+    color: red;
+}
+.modal-photo-container >button{
+    align-self: flex-start;
+    cursor: pointer;
+}
+.modal-photo-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.modal-login-container>div>img{
+    width: 100%;
+    height: 10vh;
+    object-fit: contain;
+
+}
+.type-of-form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+}
+.type-of-form>div{
+    width: 50%;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+}
+.type-of-form> div.active {
+    border-bottom: 2px solid red ;
+}
+
+.form-login-container{
+    height: 50%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10%;
+}
+.form-login-container >label{
+    width: 70%;
+}
+.form-login-container>input{
+    width: 70%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 1% 5%;
+    margin-bottom: 2%;
+}
+.form-login-container>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1%;
+    
+}
+.form-login-container p:is(:hover,:active),.form-login-container label[for=rememberMe]:is(:hover,:active)  {
+    color: red;
+    cursor: pointer;
+}
+.form-login-container>button{
+    background-color: red;
+    padding: 2% 5%;
+    border: none;
+    border-radius: 3px;
+    color:#f1f1f1;
+    cursor: pointer;
+}
+.form-login-container >button:is(:hover,:active){
+    background-color: rgb(240, 0, 0);
+    
+}
+.invalid-modal{
+    align-self: flex-start;
+    margin-left: 15%;
+    margin-bottom: 2%;
+    color: red;
+}
