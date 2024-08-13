@@ -18,7 +18,7 @@ function Products() {
   const pageQty = 10;
   const { windowW } = useContext(globalContext);
   const [win] = windowW;
-
+  console.log(productsCategories)
   useEffect(() => {
     getProducts(pageQty, pageNo)
       .then((data) => setProducts(data))
@@ -77,10 +77,10 @@ function Products() {
                 return (
                   <div
                     className="category-container-elements"
-                    onClick={() => filterProducts(category)}
+                    onClick={() => filterProducts(category.slug)}
                     key={index}
                   >
-                    {category}
+                    {category.slug}
                   </div>
                 );
               })}
@@ -112,8 +112,8 @@ function Products() {
             </div>
           </div>
           <div className="list-container">
-            {products.length > 0 &&
-              products.map((value, index) => {
+            {products?.length > 0 &&
+              products?.map((value, index) => {
                 return (
                   <Link to={`/products/${value.id}`} className="container" key={index}>
                     <div className="test" key={value.id}>
@@ -183,9 +183,9 @@ function Products() {
               {'<'}
             </button>
             <div className="pages-nr">
-              <button on onClick={()=>setPageNo(prev=>prev=pageNo)}  className="pages-nr-active">{pageNo + 1}</button>
-              <button on onClick={()=>setPageNo(prev=>prev=pageNo+1)} >{pageNo + 2}</button>
-              <button on onClick={()=>setPageNo(prev=>prev=pageNo+2)} >{pageNo + 3}</button>
+              <button  onClick={()=>setPageNo(prev=>prev=pageNo)}  className="pages-nr-active">{pageNo + 1}</button>
+              <button  onClick={()=>setPageNo(prev=>prev=pageNo+1)} >{pageNo + 2}</button>
+              <button  onClick={()=>setPageNo(prev=>prev=pageNo+2)} >{pageNo + 3}</button>
             </div>
 
             <button

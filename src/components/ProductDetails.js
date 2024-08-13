@@ -84,11 +84,7 @@ function ProductDetails() {
                   >
                     ADD TO CART
                   </button>
-                  <button
-                    className="send-wish-btn"
-                  >
-                    ADD TO WISHLIST
-                  </button>
+                  
                 </form>
               </>
             );
